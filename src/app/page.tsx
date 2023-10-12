@@ -1,6 +1,7 @@
+import { MoviesListPage } from "@/modules/movies/pages/moviesList";
 
-export default function Home() {
+export default function MovieList() {
   return (
-    <h1>Hello world</h1>
+    <MoviesListPage />
   )
 }
