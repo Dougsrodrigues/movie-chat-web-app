@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<br />
+<div align="center">
+<h3 align="center">Movie Chat Web App</h3>
 
+  <p align="center">
+    <br />    
+    <a href="https://github.com/Dougsrodrigues/movie-chat-web-app/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/Dougsrodrigues/movie-chat-web-app/issues">Request Feature</a>
+  </p>
+</div>
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+ Movie Chat web is an application where you can see details about films, such as genre, rating and comments from people who watched it.  
+
+### Built With
+
+* [Next JS](https://nextjs.org/docs)
+* [Chakra JS](https://chakra-ui.com/getting-started)
+* [Firebase](https://firebase.google.com/docs/guides)
+
+<!-- GETTING STARTED -->
 ## Getting Started
+### Prerequisites
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
+### Installation
 
-First, run the development server:
+1. Clone the repo
+   ```sh
+   git clone https://github.com/Dougsrodrigues/movie-chat-web-app.git
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+### Running
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Start the server of application
+ ```sh
+   npm run server
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Start the application
+```sh
+   npm run dev
+   ```
+## Architecture
+For this project i've used a modular approach. With this approach i can divide the project into modules and separate the responsability of each module. 
+I have the common module where i developed the code that will be reused throughout the application, like global components, configuration of libraries like firebase and axios, providers, custom hooks, etc.
+The second module of this application is the movies module where the movies module will be created with the same configuration of the common. 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<!-- CONTACT -->
+## Contact
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Douglas Santiago - [Linkedin](https://www.linkedin.com/in/douglas-santiago-rodrigues/) - dougsrodrigues@outlook.com
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Project Link: [https://github.com/Dougsrodrigues/movie-chat-web-app](https://github.com/Dougsrodrigues/movie-chat-web-app)
