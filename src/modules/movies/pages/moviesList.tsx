@@ -17,7 +17,9 @@ export const MoviesListPage = () => {
   if (isError) {
     return <Text>Error</Text>
   }
-  return <Content>
+  return <Content
+    p={8}
+  >
     <DataTable
       isLoading={isLoading}
       data={movies}
