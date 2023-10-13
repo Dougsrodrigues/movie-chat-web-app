@@ -54,6 +54,15 @@ For this project i've used a modular approach. With this approach i can divide t
 I have the common module where i developed the code that will be reused throughout the application, like global components, configuration of libraries like firebase and axios, providers, custom hooks, etc.
 The second module of this application is the movies module where the movies module will be created with the same configuration of the common. 
 
+I use the json-server to avoid performance issues of listing the big amount of movies and to apply pagination.
+
+<!-- ROADMAP -->
+## Roadmap
+- [ ] Add auth functionality
+- [ ] Add rating functionality
+- [ ] Add favorites list functionality
+- [ ] Add newsletter functionality to send notifications to subscribers
+
 <!-- CONTACT -->
 ## Contact
 
