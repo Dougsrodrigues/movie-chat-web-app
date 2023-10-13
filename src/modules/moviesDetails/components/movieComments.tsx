@@ -1,4 +1,4 @@
-import { Avatar, Container, Flex, Heading, Skeleton, Text, VStack } from "@chakra-ui/react"
+import { Avatar, Flex, Heading, Skeleton, Text, VStack } from "@chakra-ui/react"
 import { ChangeEvent } from "react"
 import { SubmitCommentButton } from "."
 import { IComment } from "../utils/types"
@@ -17,8 +17,10 @@ export const MovieComments = ({
   handleAddComment,
   movieId,
 }: IMovieCommentsProps) => {
-  return <Container
+  return <Flex
     mt={8}
+    w='100%'
+    direction='column'
   >
     <Heading as='h3' size='lg'>Comments</Heading>
     <VStack
@@ -54,5 +56,5 @@ export const MovieComments = ({
         handleClickIcon={() => handleAddComment(movieId)}
         placeholder='Write a comment' />
     </VStack>
-  </Container >
+  </Flex >
 }

@@ -1,8 +1,9 @@
 "use client"
 import { IMovieDetailsPage } from '@/app/(movies)/comments/[id]/page'
-import { Container, Flex, HStack, Heading } from '@chakra-ui/react'
-import { MovieDescription, MoviePhoto } from "../components"
-import { MovieComments } from "../components/movieComments"
+import { Content } from '@/modules/common/components'
+import { Flex } from '@chakra-ui/react'
+import { MovieDescription, MoviePhoto, MovierHeaderDetails } from "../components"
+import { MovieComments } from '../components/movieComments'
 import { useAddCommentToMovie, useGetMoviesById } from "../hooks"
 
 export const MovieDetails = ({ params: { id } }: IMovieDetailsPage) => {
@@ -13,32 +14,24 @@ export const MovieDetails = ({ params: { id } }: IMovieDetailsPage) => {
   return (
     <Flex
       direction='column'
+      alignItems='center'
+      justifyContent='center'
     >
-      <Flex
-        w='100vw'
-        background='facebook.500'
-        justify='center'
-        align='center'
+      <MovierHeaderDetails />
+
+      <Content
+        p={8}
+        mt={4}
+        alignItems='center'
+        justifyContent='center'
+        direction='column'
       >
         <Flex
           w='100%'
-          maxWidth='1480px'
-          justify='center'
-          align='center'
-        >
-          <Heading
-            color='white'
-          >
-            About
-          </Heading>
-        </Flex>
-      </Flex>
-
-      <Container
-        mt={8}
-      >
-        <HStack
-          align='start'
+          gap={8}
+          direction={['column', 'column', 'row']}
+          alignItems='center'
+          justifyContent='center'
         >
           <MoviePhoto
             title={movie.title}
@@ -51,16 +44,19 @@ export const MovieDetails = ({ params: { id } }: IMovieDetailsPage) => {
             description={movie.description}
             director={movie.director}
           />
-        </HStack>
-      </Container>
+        </Flex>
+        <Flex
+          w='100%'>
+          <MovieComments
+            comments={movie.comments}
+            handleAddComment={handleAddComment}
+            handleOnChangeValueInputComment={handleOnChangeValueInputComment}
+            movieId={id}
+            isLoading={isLoading}
+          />
+        </Flex>
+      </Content>
 
-      <MovieComments
-        comments={movie.comments}
-        handleAddComment={handleAddComment}
-        handleOnChangeValueInputComment={handleOnChangeValueInputComment}
-        movieId={id}
-        isLoading={isLoading}
-      />
     </Flex>
 
   )

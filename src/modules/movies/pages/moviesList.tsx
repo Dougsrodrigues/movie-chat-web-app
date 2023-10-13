@@ -1,6 +1,7 @@
 "use client"
+import { Content } from "@/modules/common/components"
 import { DataTable } from "@/modules/common/components/table"
-import { Flex, Text } from "@chakra-ui/react"
+import { Text } from "@chakra-ui/react"
 import { useGetMovies } from "../hooks"
 
 export const MoviesListPage = () => {
@@ -16,9 +17,7 @@ export const MoviesListPage = () => {
   if (isError) {
     return <Text>Error</Text>
   }
-  return <Flex
-    justifyContent='center'
-  >
+  return <Content>
     <DataTable
       isLoading={isLoading}
       data={movies}
@@ -26,5 +25,6 @@ export const MoviesListPage = () => {
       handleNextPage={handleNextPage}
       handlePreviousPage={handlePreviousPage}
     />
-  </Flex>
+  </Content >
+
 }

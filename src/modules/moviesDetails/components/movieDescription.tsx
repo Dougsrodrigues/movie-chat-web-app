@@ -13,13 +13,10 @@ export const MovieDescription = ({
   isLoading
 }: IMovieDescriptionProps) => {
   return <Box
-    w='50%'
+    w={['100%', '100%', '50%']}
     alignItems='flex-start'
     justifyContent='flex-start'
-
   >
-
-
     <Skeleton
       isLoaded={!isLoading}
     >

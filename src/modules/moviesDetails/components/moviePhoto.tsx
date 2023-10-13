@@ -8,7 +8,7 @@ export const MoviePhoto = ({ title, isLoading }: MoviePhotoProps) => {
   return (
     <Skeleton
       isLoaded={!isLoading}
-      w='50%'
+      w={['100%', '100%', '50%']}
     >
       <Box
         border='1px solid black'

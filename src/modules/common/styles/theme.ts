@@ -4,8 +4,9 @@ export const theme = extendTheme({
   styles: {
     global: {
       body: {
-        w: "100%",
-        maxWidth: '1480px',
+        display: 'flex',
+        w: "100vw",
+        justifyContent: 'center'
       },
     },
   },
